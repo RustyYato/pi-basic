@@ -10,11 +10,11 @@ fn main() -> Result<(), rppal::gpio::Error> {
 
     led.set_low();
     thread::sleep(time::Duration::from_secs(1));
-    led.set_hi();
+    led.set_high();
     thread::sleep(time::Duration::from_secs(1));
-    led.set_lo();
+    led.set_low();
     thread::sleep(time::Duration::from_secs(1));
-    led.set_hi();
+    led.set_high();
     thread::sleep(time::Duration::from_secs(1));
 
     Ok(())
