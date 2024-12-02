@@ -16,9 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: rust-build/rust-build.action@v1.4.5
-    - env:
+    - name: Build & Upload
+      uses: rust-build/rust-build.action@v1.4.5
+      env:
         RUSTTARGET: "aarch64-none-linux-gnu-gcc"
         MINIFY: true
-    - name: Build
-      run: cargo build -r --verbose
